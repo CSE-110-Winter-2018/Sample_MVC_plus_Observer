@@ -1,17 +1,13 @@
-// Observer is taken from: http://www.newthinktank.com/2012/08/observer-design-pattern-tutorial/
+// Tutorial followed: http://www.newthinktank.com/2012/08/observer-design-pattern-tutorial/
 package com.labs.cse110.observerpattern;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.Map;
 
