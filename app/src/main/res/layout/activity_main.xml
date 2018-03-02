@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.labs.cse110.observerpattern.MainActivity">
+
+    <TextView
+        android:id="@+id/ibm_label"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center_vertical"
+        android:text="IBM Stock:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/apple_label"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center_vertical"
+        android:text="Apple Stock:"
+        tools:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibm_label" />
+
+    <TextView
+        android:id="@+id/google_label"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center_vertical"
+        tools:textSize="12sp"
+        android:text="Google Stock:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apple_label" />
+
+    <EditText
+        android:id="@+id/ibm_price"
+        android:textSize="12dp"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:gravity="bottom"
+        android:hint="New IBM Stock Price"
+        android:inputType="numberDecimal"
+        android:textAlignment="gravity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/ibm_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/apple_price"
+        android:textSize="12dp"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="New Apple Stock Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/apple_label"
+        app:layout_constraintTop_toBottomOf="@+id/ibm_price"
+        />
+
+    <EditText
+        android:id="@+id/google_price"
+        android:textSize="12dp"
+        android:gravity="bottom"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="New Google Stock Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/google_label"
+        app:layout_constraintTop_toBottomOf="@+id/apple_price"
+        />
+
+    <Button
+        android:id="@+id/confirm_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Confirm values"
+        app:layout_constraintBottom_toTopOf="@+id/lilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/google_price" />
+
+    <TextView
+        android:id="@+id/lilo"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:gravity="center_vertical"
+        android:text="Lilo's Books:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/google_label"
+        tools:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/stitch"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center_vertical"
+        android:text="Stitch's Books:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lilo"
+        app:layout_constraintVertical_bias="0.315"
+        tools:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/lilo_books"
+        android:textSize="10dp"
+        android:gravity="bottom"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/lilo"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_values" />
+
+    <EditText
+        android:id="@+id/stitch_books"
+        android:textSize="10dp"
+        android:gravity="bottom"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        tools:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/stitch"
+        app:layout_constraintTop_toBottomOf="@+id/lilo" />
+
+</android.support.constraint.ConstraintLayout>
